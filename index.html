@@ -99,67 +99,68 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // --- ส่วนที่ต้องแก้ไขข้อมูลสมาชิก ---
         const membersData = [
             {
                 deptName: 'Coordinators',
                 color: 'red',
                 members: [
-                    { full: 'นางสาวชุติการณ์ สมสายฝน', nick: 'กิ้บ', role: 'หัวหน้าประสานงาน', ig: '@9czusi.k', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวใบข้าว เปี่ยมทองคำ', nick: 'ใบข้าว', role: 'ประสานงาน', ig: '@bqnclz9', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวพัทธนันท์ ไกรทอง', nick: 'ออม', role: 'ประสานงาน', ig: '@7augustii', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
+                    { full: '----', nick: '----', role: 'หัวหน้าประสานงาน', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'ประสานงาน', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'ประสานงาน', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
                 ]
             },
             {
                 deptName: 'Graphic Design',
                 color: 'zinc-500',
                 members: [
-                    { full: 'นางสาวบุญญาลักษณ์ ปัสสาภัย', nick: 'บิว', role: 'หัวหน้ากราฟิก', ig: '@b4eau._', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวอนัญญา ชัยเจริญ', nick: 'จีน', role: 'กราฟิก', ig: '@jiessw_', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาววรัญญา รัตนวงศ์', nick: 'แพนเค้ก', role: 'กราฟิก', ig: '@warany.aa', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวสุนิสา สาริก', nick: 'น้อยหน่า', role: 'กราฟิก', ig: '@sunisaaa.sr', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นายศรัณยพงศ์ ชินะโชติ', nick: 'ฟาร์ม', role: 'กราฟิก', ig: '@thungdokmai_', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
+                    { full: '----', nick: '----', role: 'หัวหน้ากราฟิก', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'กราฟิก', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'กราฟิก', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'กราฟิก', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
                 ]
             },
             {
                 deptName: 'Facilities',
                 color: 'red',
                 members: [
-                    { full: 'นายภานุวัตร สมาจักร์', nick: 'บอล', role: 'หัวหน้าสถานที่', ig: '@b4nwxq_', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นายวชิรวิช แสนขัติ', nick: 'ภีม', role: 'สถานที่', ig: '@cupjuan', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นายรัชพล การุณ', nick: 'รัช', role: 'สถานที่', ig: '@ratchaphonkarun', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นายกฤตเมธ จันละบุตร', nick: 'คิว', role: 'สถานที่', ig: '@kiwxs0z', img: 'https://scontent.fbkk29-8.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwGFeGCI&_nc_oc=AdmujmyQZ6NHn5PtbubkinMnmwvoti5dQfqCxMv8rdBcLvgON-1cZRMeq0Ur9v5xxjo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk29-8.fna&oh=03_Q7cD4QG-c0VcAMSgnI7E4wYyMkvrQz84sx6vadxbp8EC3YIR-Q&oe=69927DDA' },
-                    { full: 'นายชนัญธร ขจรกุลเจริฐ', nick: 'กาฟิว', role: 'สถานที่', ig: '@chanant0rn._', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
+                    { full: '----', nick: '----', role: 'หัวหน้าสถานที่', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'สถานที่', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'สถานที่', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'สถานที่', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'สถานที่', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
                 ]
             },
             {
                 deptName: 'Activities',
                 color: 'zinc-500',
                 members: [
-                    { full: 'นางสาวเอมี่ อมิตา ลิม', nick: 'เอมี่', role: 'หัวหน้ากิจกรรม', ig: '@amyamitalim_', img: 'https://scontent.fbkk29-5.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwFuu4wC&_nc_oc=AdlZdK7KlNyqYRegY4jEs43xP1gECmkGchHUJxN_-WscjAivUw_oiO6uxsVh5ujOe-E&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk29-5.fna&oh=03_Q7cD4QG5H8x0XJLDw1w4AkoTjoHnHrfcxkG70pvfcJG9wo2d-A&oe=69927D47' },
-                    { full: 'นางสาวปาณิสรา โชติประทุม', nick: 'เปียโน', role: 'กิจกรรม', ig: '@pianonaa_z', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวเพชรณิชา สินประเสริฐ', nick: 'นิชา', role: 'กิจกรรม', ig: '@niichanyy_', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวกรวรรณ ภูจีวร', nick: 'น้ำปั่น', role: 'กิจกรรม', ig: '@krw_nppp', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
+                    { full: '----', nick: '----', role: 'หัวหน้ากิจกรรม', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'กิจกรรม', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'กิจกรรม', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'กิจกรรม', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
                 ]
             },
             {
                 deptName: 'Supplies',
                 color: 'red',
                 members: [
-                    { full: 'นางสาวกมลชนก หัสดร', nick: 'พู่', role: 'หัวหน้าพัสดุ', ig: '@maym.ay316', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวพรพิมล ลาดนอก', nick: 'ฟาง', role: 'พัสดุ', ig: '@st_rgja_', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
+                    { full: '----', nick: '----', role: 'หัวหน้าพัสดุ', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'พัสดุ', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
                 ]
             },
             {
                 deptName: 'Finance & PR',
                 color: 'zinc-500',
                 members: [
-                    { full: 'นางสาวกันยากร หงษ์พงษ์', nick: 'แพรวา', role: 'หัวหน้าการเงิน', ig: '@ig', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวศศิธร ศรีวิเชียร', nick: 'ปาล์ม', role: 'หัวหน้าฝ่ายประชาสัมพันธ์', ig: '@ig', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
-                    { full: 'นางสาวอภิรตา ขุนทะ', nick: 'นัส', role: 'ฝ่ายประชาสัมพันธ์', ig: '@iwwcyhmd_n', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
+                    { full: '----', nick: '----', role: 'หัวหน้าการเงิน/ปชส.', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'หัวหน้าประชาสัมพันธ์.', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' },
+                    { full: '----', nick: '----', role: 'ประชาสัมพันธ์.', ig: '@ssucseed.officia1', img: 'https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-question-mark-vector-icon-png-image_963283.jpg' }
                 ]
             }
         ];
 
+        // --- ระบบแสดงผล (ห้ามแก้ถ้าไม่ชำนาญ) ---
         const container = document.getElementById('dynamic-members');
         membersData.forEach((dept, idx) => {
             let html = `
@@ -184,6 +185,7 @@
             container.innerHTML += html;
         });
 
+        // Particles
         particlesJS("particles-js", { "particles": { "number": { "value": 40 }, "color": { "value": "#e11d48" }, "shape": { "type": "circle" }, "opacity": { "value": 0.3 }, "size": { "value": 2 }, "line_linked": { "enable": true, "distance": 150, "color": "#e11d48", "opacity": 0.1, "width": 1 }, "move": { "enable": true, "speed": 1.5 } } });
 
         function openModal(full, nick, role, ig, img) {
