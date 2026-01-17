@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEMBERS | SUCSEED 2026</title>
+    <title>OUR SQUAD | SUCSEED 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -11,162 +11,203 @@
             font-family: 'Kanit', sans-serif; 
             background-color: #000000; 
             color: white;
-            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
         .grunge-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
         }
-        .member-gradient {
-            background: linear-gradient(180deg, rgba(225,29,72,0) 60%, rgba(225,29,72,0.8) 100%);
+        .member-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .text-stroke {
-            -webkit-text-stroke: 1px rgba(255,255,255,0.3);
-            color: transparent;
+        .member-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #e11d48;
         }
-        /* แอนิเมชันตอนโหลดเข้าหน้า */
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        .dept-title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+        .red-glitch {
+            text-shadow: 2px 0 #e11d48, -2px 0 #ffffff;
+        }
     </style>
 </head>
 <body class="grunge-bg">
 
-    <header class="pt-20 pb-10 px-6 text-center">
-        <a href="javascript:history.back()" class="text-zinc-500 hover:text-red-600 transition-colors uppercase font-bold text-sm tracking-[0.3em] mb-4 inline-block">← Back to Main</a>
-        <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter">
-            THE <span class="text-red-600">SQUAD</span>
-        </h1>
-        <p class="text-zinc-400 mt-4 max-w-lg mx-auto font-light italic uppercase tracking-widest">
-            เบื้องหลังพลังขับเคลื่อน <span class="text-white font-bold">SUCSEED เบอร์ 1</span>
-        </p>
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="javascript:history.back()" class="font-black italic text-xl tracking-tighter hover:text-red-600 transition">
+                SUCSEED <span class="text-red-600">2026</span>
+            </a>
+            <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">Member Directory</span>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-7xl md:text-9xl font-black italic tracking-tighter mb-4 red-glitch">THE MEMBERS</h1>
+            <p class="text-zinc-500 max-w-2xl mx-auto uppercase tracking-widest font-bold">บุคลากรทั้ง 25 คน ผู้พร้อมขับเคลื่อนสวนกุหลาบชลบุรี</p>
+        </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            
-            <div class="reveal group relative bg-zinc-900 border-2 border-zinc-800 overflow-hidden shadow-[15px_15px_0px_#e11d48]">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                    <img src="https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwGDEdDE&_nc_oc=Adlypc2o7H6LX0OKPKYTMYW2xm2GtVQAqD17oGjCbqYMeGzQyiiz9Sx2E5gqr6AUG-k&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-2.fna&oh=03_Q7cD4QERAquiXh-KPcyN9ntqqSk2l6Quw37_TcB4JOK7SH3FXg&oe=69919B7F" 
-                         alt="หยก" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 member-gradient"></div>
-                    <div class="absolute bottom-4 left-6">
-                        <span class="bg-red-600 text-white text-[10px] px-2 py-1 font-black uppercase italic">Leader</span>
-                        <h2 class="text-4xl font-black italic tracking-tighter mt-1">หยก</h2>
+    <main class="container mx-auto px-6 pb-24 space-y-32">
+
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-4xl font-black italic text-red-600">01 EXECUTIVES</h2>
+                <div class="h-[2px] flex-grow bg-zinc-800"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <div class="member-card bg-zinc-900 border-2 border-red-600 p-2">
+                        <div class="aspect-[3/4] bg-zinc-800 overflow-hidden relative group">
+                            <img src="https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwGDEdDE&_nc_oc=Adlypc2o7H6LX0OKPKYTMYW2xm2GtVQAqD17oGjCbqYMeGzQyiiz9Sx2E5gqr6AUG-k&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-2.fna&oh=03_Q7cD4QERAquiXh-KPcyN9ntqqSk2l6Quw37_TcB4JOK7SH3FXg&oe=69919B7F" class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 font-black italic text-xs uppercase">President</div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-3xl font-black italic">หยก</h3>
+                            <p class="text-zinc-500 text-sm">นางสาวณัฐณิชา โตกำแพง</p>
+                        </div>
                     </div>
                 </div>
-                <div class="p-6">
-                    <p class="text-red-600 font-bold text-sm mb-2 uppercase tracking-tighter">นางสาวณัฐณิชา โตกำแพง</p>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed italic border-l-2 border-zinc-700 pl-4">
-                        "ไม่พูดให้จำ แต่จะทำให้ดู" — พร้อมนำทัพนักเรียนสู่การเปลี่ยนแปลงที่แท้จริง
-                    </p>
-                </div>
-            </div>
-
-            <div class="reveal group relative bg-zinc-900 border-2 border-zinc-800 overflow-hidden shadow-[15px_15px_0px_#ffffff]">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                    <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC" 
-                         alt="โตโน่" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 member-gradient"></div>
-                    <div class="absolute bottom-4 left-6">
-                        <span class="bg-white text-black text-[10px] px-2 py-1 font-black uppercase italic">Vice President</span>
-                        <h2 class="text-4xl font-black italic tracking-tighter mt-1">โตโน่</h2>
+                <div class="member-card bg-zinc-950 border border-zinc-800 p-2">
+                    <div class="aspect-[3/4] bg-zinc-800 overflow-hidden relative">
+                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC" class="w-full h-full object-cover grayscale hover:grayscale-0">
+                        <div class="absolute top-4 left-4 bg-white text-black px-3 py-1 font-black italic text-xs uppercase">Vice Pres.</div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-black italic">โตโน่</h3>
+                        <p class="text-zinc-500 text-xs">นายธาวา พัชรนรากุล</p>
                     </div>
                 </div>
-                <div class="p-6">
-                    <p class="text-red-600 font-bold text-sm mb-2 uppercase tracking-tighter">นายธาวา พัชรนรากุล</p>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed italic border-l-2 border-zinc-700 pl-4">
-                        "กำขี้ ดีกว่า กำตด" — ทำงานจริงจัง เน้นผลลัพธ์ที่จับต้องได้เพื่อทุกคน
-                    </p>
-                </div>
-            </div>
-
-            <div class="reveal group relative bg-zinc-900 border-2 border-zinc-800 overflow-hidden shadow-[15px_15px_0px_#e11d48]">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                    <img src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/611956706_885130144099206_590462641228853843_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=63PX7U-6NKIQ7kNvwHlpwjy&_nc_oc=AdmT3V0BqpiJloMSogWRkt_7-u7t4p2ey4tyRY1ZJWI6c6p7N1XA--vwP6OV5OIShwA&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QGo7u_wFMfpEtEmNFfV8GQ4MoXzYNvnTSu75ltfxZ3gKQ&oe=69916CF9" 
-                         alt="จูน" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 member-gradient"></div>
-                    <div class="absolute bottom-4 left-6">
-                        <span class="bg-red-600 text-white text-[10px] px-2 py-1 font-black uppercase italic">Secretary</span>
-                        <h2 class="text-4xl font-black italic tracking-tighter mt-1">จูน</h2>
+                <div class="member-card bg-zinc-950 border border-zinc-800 p-2">
+                    <div class="aspect-[3/4] bg-zinc-800 overflow-hidden relative">
+                        <img src="https://via.placeholder.com/400x500/111/fff?text=SUCSEED" class="w-full h-full object-cover grayscale hover:grayscale-0">
+                        <div class="absolute top-4 left-4 bg-white text-black px-3 py-1 font-black italic text-xs uppercase">Vice Pres.</div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-black italic">ชื่อสมาชิก</h3>
+                        <p class="text-zinc-500 text-xs">ชื่อ-นามสกุลจริง</p>
                     </div>
                 </div>
-                <div class="p-6">
-                    <p class="text-red-600 font-bold text-sm mb-2 uppercase tracking-tighter">นางสาวกฤติยา ทัพซ้าย</p>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed italic border-l-2 border-zinc-700 pl-4">
-                        "ความลำบากจะหลอมคนให้ทนทาน" — ประสานงานทุกฝ่ายอย่างแม่นยำและตั้งใจ
-                    </p>
-                </div>
             </div>
+        </section>
 
-            <div class="reveal group relative bg-zinc-900 border-2 border-zinc-800 overflow-hidden shadow-[15px_15px_0px_#ffffff]">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                    <img src="https://scontent.fbkk29-8.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwGFeGCI&_nc_oc=AdmujmyQZ6NHn5PtbubkinMnmwvoti5dQfqCxMv8rdBcLvgON-1cZRMeq0Ur9v5xxjo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk29-8.fna&oh=03_Q7cD4QG-c0VcAMSgnI7E4wYyMkvrQz84sx6vadxbp8EC3YIR-Q&oe=69927DDA" 
-                         alt="คิว" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 member-gradient"></div>
-                    <div class="absolute bottom-4 left-6">
-                        <span class="bg-white text-black text-[10px] px-2 py-1 font-black uppercase italic">Facilities</span>
-                        <h2 class="text-4xl font-black italic tracking-tighter mt-1">คิว</h2>
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-4xl font-black italic text-white">02 COORDINATORS</h2>
+                <div class="h-[2px] flex-grow bg-zinc-800"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <script>
+                    for(let i=1; i<=4; i++) {
+                        document.write(`
+                            <div class="member-card bg-zinc-900/50 border border-zinc-800 p-2 group">
+                                <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
+                                    <img src="https://via.placeholder.com/300?text=CO" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                                </div>
+                                <h3 class="font-black italic text-lg px-2">ชื่อเล่น</h3>
+                                <p class="text-red-600 text-[10px] font-bold px-2 uppercase mb-2">ประสานงาน</p>
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-center gap-4 mb-12 text-red-600">
+                <div class="h-[2px] flex-grow bg-zinc-800"></div>
+                <h2 class="text-4xl font-black italic">03 FACILITIES</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+                <div class="member-card bg-zinc-900/50 border border-zinc-800 p-2 group">
+                    <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
+                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwF4wEs5&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
                     </div>
+                    <h3 class="font-black italic text-lg px-2 text-white">คิว</h3>
+                    <p class="text-zinc-500 text-[10px] font-bold px-2 uppercase mb-2">HEAD FACILITIES</p>
                 </div>
-                <div class="p-6">
-                    <p class="text-red-600 font-bold text-sm mb-2 uppercase tracking-tighter">นายกฤตเมธ จันละบุตร</p>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed italic border-l-2 border-zinc-700 pl-4">
-                        "ซักซี้ด ซักรีด ซักไซ้" — ดูแลพื้นที่โรงเรียนให้ตอบโจทย์การใช้งานของทุกคน
-                    </p>
-                </div>
+                <script>
+                    for(let i=1; i<=4; i++) {
+                        document.write(`
+                            <div class="member-card bg-zinc-900/50 border border-zinc-800 p-2 group">
+                                <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
+                                    <img src="https://via.placeholder.com/300?text=FAC" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                                </div>
+                                <h3 class="font-black italic text-lg px-2">ชื่อเล่น</h3>
+                                <p class="text-zinc-500 text-[10px] font-bold px-2 uppercase mb-2">ฝ่ายสถานที่</p>
+                            </div>
+                        `);
+                    }
+                </script>
             </div>
+        </section>
 
-            <div class="reveal group relative bg-zinc-900 border-2 border-zinc-800 overflow-hidden shadow-[15px_15px_0px_#e11d48]">
-                <div class="aspect-[3/4] overflow-hidden relative">
-                    <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47" 
-                         alt="เอมี่" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 member-gradient"></div>
-                    <div class="absolute bottom-4 left-6">
-                        <span class="bg-red-600 text-white text-[10px] px-2 py-1 font-black uppercase italic">Activities</span>
-                        <h2 class="text-4xl font-black italic tracking-tighter mt-1">เอมี่</h2>
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-4xl font-black italic text-red-600">04 ACTIVITIES</h2>
+                <div class="h-[2px] flex-grow bg-zinc-800"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div class="member-card bg-zinc-900 border border-zinc-800 p-2 group">
+                    <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
+                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
                     </div>
+                    <h3 class="font-black italic text-md px-2">เอมี่</h3>
                 </div>
-                <div class="p-6">
-                    <p class="text-red-600 font-bold text-sm mb-2 uppercase tracking-tighter">นางสาวเอมี่ อมิตา ลิม</p>
-                    <p class="text-zinc-400 text-sm font-light leading-relaxed italic border-l-2 border-zinc-700 pl-4">
-                        "ไม่เก่งที่สุด แต่ตั้งใจที่สุด" — สร้างสรรค์กิจกรรมที่สร้างความสุขและสาระให้กับชาวสวนชล
-                    </p>
-                </div>
+                <script>
+                    for(let i=1; i<=6; i++) {
+                        document.write(`
+                            <div class="member-card bg-zinc-900 border border-zinc-800 p-2 group">
+                                <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
+                                    <img src="https://via.placeholder.com/300?text=ACT" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                                </div>
+                                <h3 class="font-black italic text-md px-2 text-white">ชื่อเล่น</h3>
+                            </div>
+                        `);
+                    }
+                </script>
             </div>
+        </section>
 
-        </div>
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-4xl font-black italic text-white uppercase">05 Finance & Support</h2>
+                <div class="h-[2px] flex-grow bg-zinc-800"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
+                <div class="member-card bg-zinc-900/50 border border-zinc-800 p-2 group">
+                    <div class="aspect-square bg-zinc-800 overflow-hidden mb-4 border-b-2 border-red-600">
+                        <img src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/611956706_885130144099206_590462641228853843_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=63PX7U-6NKIQ7kNvwHlpwjy&_nc_oc=AdmT3V0BqpiJloMSogWRkt_7-u7t4p2ey4tyRY1ZJWI6c6p7N1XA--vwP6OV5OIShwA&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QGo7u_wFMfpEtEmNFfV8GQ4MoXzYNvnTSu75ltfxZ3gKQ&oe=69916CF9" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                    </div>
+                    <h3 class="font-black italic text-lg px-2">จูน</h3>
+                    <p class="text-red-600 text-[10px] font-bold px-2 uppercase mb-2">SECRETARY</p>
+                </div>
+
+                <script>
+                    for(let i=1; i<=6; i++) {
+                        document.write(`
+                            <div class="member-card bg-zinc-900 border border-zinc-800 p-2 group">
+                                <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
+                                    <img src="https://via.placeholder.com/300?text=MEM" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                                </div>
+                                <h3 class="font-black italic text-md px-2 text-white">ชื่อเล่น</h3>
+                                <p class="text-zinc-500 text-[10px] font-bold px-2 uppercase mb-2">การเงิน/สนับสนุน</p>
+                            </div>
+                        `);
+                    }
+                </script>
+            </div>
+        </section>
+
     </main>
 
-    <section class="py-24 relative overflow-hidden">
-        <div class="absolute inset-0 flex items-center justify-center opacity-5 select-none pointer-events-none">
-            <h2 class="text-[20vw] font-black italic tracking-tighter">SUCSEED</h2>
-        </div>
-        <div class="text-center relative z-10">
-            <p class="text-zinc-600 uppercase tracking-[1em] text-xs mb-8">No talk just act</p>
-            <div class="flex justify-center gap-4">
-                <div class="w-12 h-1 bg-red-600"></div>
-                <div class="w-12 h-1 bg-white"></div>
-                <div class="w-12 h-1 bg-red-600"></div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // ระบบเลื่อนแล้วค่อยๆ เด้งขึ้นมา (Scroll Reveal)
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        // เรียกใช้ครั้งแรกเมื่อโหลดเสร็จ
-        reveal();
-    </script>
+    <footer class="py-12 bg-black border-t border-zinc-900 text-center">
+        <p class="text-red-600 font-black italic text-2xl mb-2">SUCSEED 2026</p>
+        <p class="text-zinc-600 text-[10px] uppercase tracking-[0.5em]">No talk just act | Suankularb Chonburi</p>
+    </footer>
 
 </body>
 </html>
