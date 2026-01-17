@@ -17,197 +17,195 @@
             background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
         }
         .member-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #222;
         }
         .member-card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-5px);
             border-color: #e11d48;
+            box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
         }
-        .dept-title {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            transform: rotate(180deg);
+        /* Modal Style */
+        .modal { 
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            inset: 0; 
+            background: rgba(0,0,0,0.85); 
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
         }
-        .red-glitch {
-            text-shadow: 2px 0 #e11d48, -2px 0 #ffffff;
+        .modal-content {
+            background: #111;
+            border: 4px solid #e11d48;
+            width: 90%;
+            max-width: 400px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+        @keyframes popIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     </style>
 </head>
 <body class="grunge-bg">
 
-    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="javascript:history.back()" class="font-black italic text-xl tracking-tighter hover:text-red-600 transition">
-                SUCSEED <span class="text-red-600">2026</span>
-            </a>
-            <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">Member Directory</span>
-        </div>
-    </nav>
-
-    <header class="pt-32 pb-16 px-6">
-        <div class="container mx-auto text-center">
-            <h1 class="text-7xl md:text-9xl font-black italic tracking-tighter mb-4 red-glitch">THE MEMBERS</h1>
-            <p class="text-zinc-500 max-w-2xl mx-auto uppercase tracking-widest font-bold">บุคลากรทั้ง 25 คน ผู้พร้อมขับเคลื่อนสวนกุหลาบชลบุรี</p>
-        </div>
+    <header class="pt-20 pb-10 text-center">
+        <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter text-white">
+            THE <span class="text-red-600">SQUAD</span>
+        </h1>
+        <p class="text-zinc-500 font-bold uppercase tracking-[0.4em] text-xs mt-2">Suankularb Wittayalai Chonburi</p>
     </header>
 
-    <main class="container mx-auto px-6 pb-24 space-y-32">
-
-        <section>
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-4xl font-black italic text-red-600">01 EXECUTIVES</h2>
-                <div class="h-[2px] flex-grow bg-zinc-800"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="md:col-span-1">
-                    <div class="member-card bg-zinc-900 border-2 border-red-600 p-2">
-                        <div class="aspect-[3/4] bg-zinc-800 overflow-hidden relative group">
-                            <img src="https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwGDEdDE&_nc_oc=Adlypc2o7H6LX0OKPKYTMYW2xm2GtVQAqD17oGjCbqYMeGzQyiiz9Sx2E5gqr6AUG-k&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-2.fna&oh=03_Q7cD4QERAquiXh-KPcyN9ntqqSk2l6Quw37_TcB4JOK7SH3FXg&oe=69919B7F" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 font-black italic text-xs uppercase">President</div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-3xl font-black italic">หยก</h3>
-                            <p class="text-zinc-500 text-sm">นางสาวณัฐณิชา โตกำแพง</p>
-                        </div>
-                    </div>
+    <main class="container mx-auto px-6 pb-24">
+        
+        <section class="mb-20">
+            <h2 class="text-center text-2xl font-black italic mb-8 border-b-2 border-red-600 inline-block mx-auto w-full md:w-auto px-4 pb-2">ADVISORS | คุณครูที่ปรึกษา</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="member-card p-2 bg-zinc-900" onclick="openProfile('คุณครู ท่านที่ 1', '@instagram_1', 'คุณครูที่ปรึกษา', 'https://via.placeholder.com/400x500?text=Teacher1')">
+                    <img src="https://via.placeholder.com/400x500?text=Teacher1" class="w-full aspect-[3/4] object-cover">
+                    <div class="p-3 text-center"><p class="font-bold italic">ครูที่ปรึกษา 1</p></div>
                 </div>
-                <div class="member-card bg-zinc-950 border border-zinc-800 p-2">
-                    <div class="aspect-[3/4] bg-zinc-800 overflow-hidden relative">
-                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC" class="w-full h-full object-cover grayscale hover:grayscale-0">
-                        <div class="absolute top-4 left-4 bg-white text-black px-3 py-1 font-black italic text-xs uppercase">Vice Pres.</div>
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-black italic">โตโน่</h3>
-                        <p class="text-zinc-500 text-xs">นายธาวา พัชรนรากุล</p>
-                    </div>
-                </div>
-                <div class="member-card bg-zinc-950 border border-zinc-800 p-2">
-                    <div class="aspect-[3/4] bg-zinc-800 overflow-hidden relative">
-                        <img src="https://via.placeholder.com/400x500/111/fff?text=SUCSEED" class="w-full h-full object-cover grayscale hover:grayscale-0">
-                        <div class="absolute top-4 left-4 bg-white text-black px-3 py-1 font-black italic text-xs uppercase">Vice Pres.</div>
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-black italic">ชื่อสมาชิก</h3>
-                        <p class="text-zinc-500 text-xs">ชื่อ-นามสกุลจริง</p>
-                    </div>
+                <div class="member-card p-2 bg-zinc-900" onclick="openProfile('คุณครู ท่านที่ 2', '@instagram_2', 'คุณครูที่ปรึกษา', 'https://via.placeholder.com/400x500?text=Teacher2')">
+                    <img src="https://via.placeholder.com/400x500?text=Teacher2" class="w-full aspect-[3/4] object-cover">
+                    <div class="p-3 text-center"><p class="font-bold italic">ครูที่ปรึกษา 2</p></div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-4xl font-black italic text-white">02 COORDINATORS</h2>
-                <div class="h-[2px] flex-grow bg-zinc-800"></div>
+        <section class="mb-20">
+            <h2 class="text-center text-2xl font-black italic mb-8 border-b-2 border-white inline-block mx-auto px-4 pb-2">EXECUTIVES</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <div class="member-card p-2 bg-red-600" onclick="openProfile('นางสาวณัฐณิชา โตกำแพง', '@instagram_yok', 'ประธานนักเรียน', 'https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwGDEdDE&_nc_oc=Adlypc2o7H6LX0OKPKYTMYW2xm2GtVQAqD17oGjCbqYMeGzQyiiz9Sx2E5gqr6AUG-k&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-2.fna&oh=03_Q7cD4QERAquiXh-KPcyN9ntqqSk2l6Quw37_TcB4JOK7SH3FXg&oe=69919B7F')">
+                    <img src="https://scontent.fbkk4-2.fna.fbcdn.net/v/t1.15752-9/618420643_1422369312578842_5629615193655129133_n.png?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qI1TTkzdvxoQ7kNvwGDEdDE&_nc_oc=Adlypc2o7H6LX0OKPKYTMYW2xm2GtVQAqD17oGjCbqYMeGzQyiiz9Sx2E5gqr6AUG-k&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-2.fna&oh=03_Q7cD4QERAquiXh-KPcyN9ntqqSk2l6Quw37_TcB4JOK7SH3FXg&oe=69919B7F" class="w-full aspect-[3/4] object-cover">
+                    <div class="p-3 text-center text-white"><p class="font-black italic uppercase">ประธาน</p></div>
+                </div>
+                <div class="member-card p-2 bg-zinc-900" onclick="openProfile('นายธาวา พัชรนรากุล', '@instagram_tono', 'รองประธานนักเรียน', 'https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC')">
+                    <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/612247838_1253824166643530_4341460234555443409_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zlSIbcHydlkQ7kNvwF4wEs5&_nc_oc=Adkny-H5RVSs-rnT4Y0LQngyBEwk5dsvSiVH8fLYaNcOmRwCcCo1UDwLQRe2LXbkqII&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QEBBUCAuPSGes3ycbXRvGEZyFk3HiSjq1cP1yWu9ox31Q&oe=69918BAC" class="w-full aspect-[3/4] object-cover">
+                    <div class="p-3 text-center text-white"><p class="font-black italic uppercase">รองประธาน</p></div>
+                </div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-xl font-bold italic mb-6 text-red-600">COORDINATORS | ประสานงาน</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <script>
+                    for(let i=1; i<=3; i++) {
+                        document.write(`<div class="member-card bg-zinc-900 p-1" onclick="openProfile('ชื่อประสานงาน ${i}', '@ig_coord_${i}', 'ฝ่ายประสานงาน', 'https://via.placeholder.com/400x500')"><img src="https://via.placeholder.com/400x500" class="w-full aspect-[3/4] object-cover"></div>`);
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-xl font-bold italic mb-6 text-white">GRAPHIC DESIGNERS | ฝ่ายกราฟิก</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <script>
                     for(let i=1; i<=4; i++) {
-                        document.write(`
-                            <div class="member-card bg-zinc-900/50 border border-zinc-800 p-2 group">
-                                <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
-                                    <img src="https://via.placeholder.com/300?text=CO" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                                </div>
-                                <h3 class="font-black italic text-lg px-2">ชื่อเล่น</h3>
-                                <p class="text-red-600 text-[10px] font-bold px-2 uppercase mb-2">ประสานงาน</p>
-                            </div>
-                        `);
+                        document.write(`<div class="member-card bg-zinc-900 p-1" onclick="openProfile('ชื่อกราฟิก ${i}', '@ig_design_${i}', 'ฝ่ายกราฟิก', 'https://via.placeholder.com/400x500')"><img src="https://via.placeholder.com/400x500" class="w-full aspect-[3/4] object-cover"></div>`);
                     }
                 </script>
             </div>
         </section>
 
-        <section>
-            <div class="flex items-center gap-4 mb-12 text-red-600">
-                <div class="h-[2px] flex-grow bg-zinc-800"></div>
-                <h2 class="text-4xl font-black italic">03 FACILITIES</h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
-                <div class="member-card bg-zinc-900/50 border border-zinc-800 p-2 group">
-                    <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
-                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwF4wEs5&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                    </div>
-                    <h3 class="font-black italic text-lg px-2 text-white">คิว</h3>
-                    <p class="text-zinc-500 text-[10px] font-bold px-2 uppercase mb-2">HEAD FACILITIES</p>
+        <section class="mb-20">
+            <h2 class="text-xl font-bold italic mb-6 text-red-600">FACILITIES | ฝ่ายสถานที่</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="member-card bg-zinc-900 p-1" onclick="openProfile('คิว', '@ig_q', 'ฝ่ายสถานที่', 'https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwF4wEs5&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA')">
+                    <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/614469872_2075634229857235_4269454143995163795_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RUCKW42UnjoQ7kNvwF4wEs5&_nc_oc=Adknp6jEQ9isuqo4s_T3kxvhoUw1glVMygbOvjuu-3pchWHWwvTLmLdznlP9Nvs3gl0&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QHuoEoPUXLUdB--9GAPOqdAhfz4bEBPL5SS-EkNvvw_5w&oe=69919CDA" class="w-full aspect-[3/4] object-cover">
                 </div>
                 <script>
-                    for(let i=1; i<=4; i++) {
-                        document.write(`
-                            <div class="member-card bg-zinc-900/50 border border-zinc-800 p-2 group">
-                                <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
-                                    <img src="https://via.placeholder.com/300?text=FAC" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                                </div>
-                                <h3 class="font-black italic text-lg px-2">ชื่อเล่น</h3>
-                                <p class="text-zinc-500 text-[10px] font-bold px-2 uppercase mb-2">ฝ่ายสถานที่</p>
-                            </div>
-                        `);
+                    for(let i=2; i<=5; i++) {
+                        document.write(`<div class="member-card bg-zinc-900 p-1" onclick="openProfile('ชื่อสถานที่ ${i}', '@ig_fac_${i}', 'ฝ่ายสถานที่', 'https://via.placeholder.com/400x500')"><img src="https://via.placeholder.com/400x500" class="w-full aspect-[3/4] object-cover"></div>`);
                     }
                 </script>
             </div>
         </section>
 
-        <section>
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-4xl font-black italic text-red-600">04 ACTIVITIES</h2>
-                <div class="h-[2px] flex-grow bg-zinc-800"></div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                <div class="member-card bg-zinc-900 border border-zinc-800 p-2 group">
-                    <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
-                        <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                    </div>
-                    <h3 class="font-black italic text-md px-2">เอมี่</h3>
+        <section class="mb-20">
+            <h2 class="text-xl font-bold italic mb-6 text-white uppercase">Activities | ฝ่ายกิจกรรม</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="member-card bg-zinc-900 p-1" onclick="openProfile('เอมี่', '@ig_amy', 'ฝ่ายกิจกรรม', 'https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47')">
+                    <img src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.15752-9/598767345_1273989277890277_7332196792638551124_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=U3LuunZUauoQ7kNvwEvJw6E&_nc_oc=AdnwSeU7ub5NzjI-SFftmNKM0oeQeriKSgaP9z_NzHD4lJVRqNoL5czzWtc9S9j1-zo&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&oh=03_Q7cD4QFewK_WjxovMiSlWBlCLiQ1VrLLdfbjdF9gF6mXcMdAKg&oe=69919C47" class="w-full aspect-[3/4] object-cover">
                 </div>
                 <script>
-                    for(let i=1; i<=6; i++) {
-                        document.write(`
-                            <div class="member-card bg-zinc-900 border border-zinc-800 p-2 group">
-                                <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
-                                    <img src="https://via.placeholder.com/300?text=ACT" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                                </div>
-                                <h3 class="font-black italic text-md px-2 text-white">ชื่อเล่น</h3>
-                            </div>
-                        `);
+                    for(let i=2; i<=4; i++) {
+                        document.write(`<div class="member-card bg-zinc-900 p-1" onclick="openProfile('ชื่อกิจกรรม ${i}', '@ig_act_${i}', 'ฝ่ายกิจกรรม', 'https://via.placeholder.com/400x500')"><img src="https://via.placeholder.com/400x500" class="w-full aspect-[3/4] object-cover"></div>`);
                     }
                 </script>
             </div>
         </section>
 
-        <section>
-            <div class="flex items-center gap-4 mb-12">
-                <h2 class="text-4xl font-black italic text-white uppercase">05 Finance & Support</h2>
-                <div class="h-[2px] flex-grow bg-zinc-800"></div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
-                <div class="member-card bg-zinc-900/50 border border-zinc-800 p-2 group">
-                    <div class="aspect-square bg-zinc-800 overflow-hidden mb-4 border-b-2 border-red-600">
-                        <img src="https://scontent.fbkk4-3.fna.fbcdn.net/v/t1.15752-9/611956706_885130144099206_590462641228853843_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=63PX7U-6NKIQ7kNvwHlpwjy&_nc_oc=AdmT3V0BqpiJloMSogWRkt_7-u7t4p2ey4tyRY1ZJWI6c6p7N1XA--vwP6OV5OIShwA&_nc_ad=z-m&_nc_cid=1483&_nc_zt=23&_nc_ht=scontent.fbkk4-3.fna&oh=03_Q7cD4QGo7u_wFMfpEtEmNFfV8GQ4MoXzYNvnTSu75ltfxZ3gKQ&oe=69916CF9" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                    </div>
-                    <h3 class="font-black italic text-lg px-2">จูน</h3>
-                    <p class="text-red-600 text-[10px] font-bold px-2 uppercase mb-2">SECRETARY</p>
-                </div>
-
+        <section class="mb-20">
+            <h2 class="text-xl font-bold italic mb-6 text-red-600 uppercase">Supplies | ฝ่ายพัสดุ</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-md">
                 <script>
-                    for(let i=1; i<=6; i++) {
-                        document.write(`
-                            <div class="member-card bg-zinc-900 border border-zinc-800 p-2 group">
-                                <div class="aspect-square bg-zinc-800 overflow-hidden mb-4">
-                                    <img src="https://via.placeholder.com/300?text=MEM" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                                </div>
-                                <h3 class="font-black italic text-md px-2 text-white">ชื่อเล่น</h3>
-                                <p class="text-zinc-500 text-[10px] font-bold px-2 uppercase mb-2">การเงิน/สนับสนุน</p>
-                            </div>
-                        `);
+                    for(let i=1; i<=2; i++) {
+                        document.write(`<div class="member-card bg-zinc-900 p-1" onclick="openProfile('ชื่อพัสดุ ${i}', '@ig_supply_${i}', 'ฝ่ายพัสดุ', 'https://via.placeholder.com/400x500')"><img src="https://via.placeholder.com/400x500" class="w-full aspect-[3/4] object-cover"></div>`);
                     }
                 </script>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-xl font-bold italic mb-6 text-white uppercase">Finance & PR | การเงิน และ ประชาสัมพันธ์</h2>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-4 max-w-md">
+                <div class="member-card bg-zinc-900 p-1" onclick="openProfile('ชื่อการเงิน', '@ig_finance', 'ฝ่ายการเงิน', 'https://via.placeholder.com/400x500')">
+                    <img src="https://via.placeholder.com/400x500?text=Finance" class="w-full aspect-[3/4] object-cover">
+                    <div class="p-2 text-center text-xs text-red-600 font-bold">FINANCE</div>
+                </div>
+                <div class="member-card bg-zinc-900 p-1" onclick="openProfile('ชื่อประชาสัมพันธ์', '@ig_pr', 'ฝ่ายประชาสัมพันธ์', 'https://via.placeholder.com/400x500')">
+                    <img src="https://via.placeholder.com/400x500?text=PR" class="w-full aspect-[3/4] object-cover">
+                    <div class="p-2 text-center text-xs text-red-600 font-bold">PUBLIC RELATIONS</div>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="py-12 bg-black border-t border-zinc-900 text-center">
-        <p class="text-red-600 font-black italic text-2xl mb-2">SUCSEED 2026</p>
-        <p class="text-zinc-600 text-[10px] uppercase tracking-[0.5em]">No talk just act | Suankularb Chonburi</p>
+    <div id="profileModal" class="modal" onclick="closeProfile()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeProfile()" class="absolute top-2 right-4 text-zinc-500 hover:text-white text-2xl font-bold">×</button>
+            <div class="w-32 h-32 mx-auto mb-4 border-2 border-red-600 overflow-hidden rounded-full">
+                <img id="pModalImg" src="" class="w-full h-full object-cover">
+            </div>
+            <p id="pModalRole" class="text-red-600 text-xs font-black uppercase tracking-widest mb-1"></p>
+            <h3 id="pModalName" class="text-2xl font-black italic text-white mb-4"></h3>
+            <div class="bg-zinc-800 p-3 inline-flex items-center gap-2 rounded-lg">
+                <span class="text-zinc-400 text-sm">IG:</span>
+                <a id="pModalIG" href="#" target="_blank" class="text-white font-bold hover:text-red-600 transition"></a>
+            </div>
+            <button onclick="closeProfile()" class="mt-8 block w-full py-2 bg-white text-black font-black uppercase text-sm hover:bg-red-600 hover:text-white transition">Close</button>
+        </div>
+    </div>
+
+    <footer class="py-12 bg-black border-t border-zinc-900 text-center text-zinc-600 text-[10px] uppercase tracking-[0.5em]">
+        No talk just act | SUCSEED 2026
     </footer>
 
+    <script>
+        function openProfile(name, ig, role, img) {
+            document.getElementById('pModalName').innerText = name;
+            document.getElementById('pModalIG').innerText = ig;
+            document.getElementById('pModalIG').href = "https://instagram.com/" + ig.replace('@', '');
+            document.getElementById('pModalRole').innerText = role;
+            document.getElementById('pModalImg').src = img;
+            document.getElementById('profileModal').style.display = 'flex';
+        }
+
+        function closeProfile() {
+            document.getElementById('profileModal').style.display = 'none';
+        }
+
+        // Close modal on Escape key
+        window.onkeydown = function(event) {
+            if (event.keyCode == 27) closeProfile();
+        };
+    </script>
 </body>
 </html>
